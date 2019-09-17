@@ -1,0 +1,28 @@
+--[[
+Author: BirdBird
+Title: Select root track of selected track
+Version: 1.0
+]]
+
+------------------------------------------
+function main()
+  local selectedTrack = reaper.GetSelectedTrack(0, 0)
+  if not selectedTrack then
+    return
+  end
+  reaper.SetTrackSelected(selectedTrack, false)
+  
+  --follow the parents until the root track is found
+  while (hasParent(selectedTrack))
+  do
+    selectedTrack = reaper.GetParentTrack(selectedTrack)
+  end    
+  
+  reaper.SetTrackSelected(selectedTrack, true)
+end
+
+function hasParent(track)
+  return reaper.GetParentTrack(track) ~= nil
+end
+
+main()
