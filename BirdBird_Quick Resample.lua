@@ -91,7 +91,12 @@ function main()
 	--send selected tracks to resample track
 	for i=1, #selectedTracks do
 		local track = selectedTracks[i]
-		reaper.CreateTrackSend(track, resampleTrack)
+		--multiout support
+		local numberOfChannels = reaper.GetMediaTrackInfo_Value(track, 'I_NCHAN')/2
+		for j=0, numberOfChannels-1 do
+			local sendID = reaper.CreateTrackSend(track, resampleTrack)
+			reaper.SetTrackSendInfo_Value( track, 0, sendID, 'I_SRCCHAN', j*2)
+		end
 	end
 
 	--move resample track above the last touched track
