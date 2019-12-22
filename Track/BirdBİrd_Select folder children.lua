@@ -1,5 +1,5 @@
 --[[
- * ReaScript Name: BirdBird_Select Folder Children.lua
+ * ReaScript Name: Select Folder Children.lua
  * Author: BirdBird
  * Licence: GPL v3
  * REAPER: 6.0

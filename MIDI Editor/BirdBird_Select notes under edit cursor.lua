@@ -1,5 +1,5 @@
 --[[
- * ReaScript Name: BirdBird_Select notes under edit cursor.lua
+ * ReaScript Name: Select notes under edit cursor.lua
  * Author: BirdBird
  * Licence: GPL v3
  * REAPER: 6.0

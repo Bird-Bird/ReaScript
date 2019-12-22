@@ -1,24 +1,21 @@
 --[[
- * ReaScript Name: Quick Resample.lua
+ * ReaScript Name: Quick Resample time selection (Render to new track).lua
  * Author: BirdBird
  * Licence: GPL v3
  * REAPER: 6.0
  * Extensions: None
- * Version: 1.3
+ * Version: 1.0
 --]]
  
 --[[
  * Changelog:
  * v1.0 (2019-12-19)
-	 + Initial Release
- * v1.1 
-	 + Added multiout recording support
- * v1.3
-	 + Fixed workflow issues with record mode
+     + Initial Release
 --]]
 
 --=====UTILITY=====--
-local resampleTrackName = 'Resample'
+local scriptTitle =  'Quick Resample time selection (Render to new track)'
+local resampleTrackName = 'Render'
 local insertNewTrackCommandID = 40001
 local unselectAllTracksCommandID = 40297
 local clearAutomaticRecordArmCommandID = 40738
@@ -30,8 +27,8 @@ function checkForResampleTrack()
 	local trackCount = reaper.CountTracks(0)
 	for i = 0, trackCount-1 do
 		local track = reaper.GetTrack(0, i)
-		local retval, trackIsResampleTrack = reaper.GetSetMediaTrackInfo_String(track, "P_EXT:BirdBirdResample", '0', false)
-		if trackIsResampleTrack == '1' then
+		local retval, trackIsRenderTrack = reaper.GetSetMediaTrackInfo_String(track, "P_EXT:BirdBirdRender", '0', false)
+		if trackIsRenderTrack == '1' then
 			return track
 		end
 	end
@@ -39,32 +36,21 @@ function checkForResampleTrack()
 end
 
 function markTrackAsResampleTrack(track)
-    reaper.GetSetMediaTrackInfo_String(track, "P_EXT:BirdBirdResample", '1', true)
+    reaper.GetSetMediaTrackInfo_String(track, "P_EXT:BirdBirdRender", '1', true)
 end
 
 function createNewResampleTrack()
 	reaper.Main_OnCommand(insertNewTrackCommandID, 0)
 
-	local newTrack = reaper.GetSelectedTrack(0, 0)
-	markTrackAsResampleTrack(newTrack)
-	reaper.Main_OnCommand(40737, 0)
-	
-	reaper.GetSetMediaTrackInfo_String(newTrack, 'P_NAME', resampleTrackName, true) --give it a fancy name
-	reaper.SetTrackColor(newTrack, reaper.ColorToNative(0, 0, 0)|0x100000) --give it a fancy color
-	
-	--record stereo out
-	reaper.SetMediaTrackInfo_Value(newTrack, 'I_RECMODE', 1)
-	reaper.SetMediaTrackInfo_Value(newTrack, 'I_RECINPUT', -1)
-	
-	--disable record monitoring
-	reaper.SetMediaTrackInfo_Value(newTrack, 'I_RECMON', 0)
-	reaper.SetMediaTrackInfo_Value(newTrack, 'I_RECMONITEMS', 0)
-	
-	--enable free item positioning
-	reaper.SetMediaTrackInfo_Value(newTrack, 'B_FREEMODE', 1)
+    local newTrack = reaper.GetSelectedTrack(0, 0)
+    markTrackAsResampleTrack(newTrack)
 
-	--disable master/parent send
-	reaper.SetMediaTrackInfo_Value(newTrack, 'B_MAINSEND', 0)
+	reaper.GetSetMediaTrackInfo_String(newTrack, 'P_NAME', resampleTrackName, true) --give it a fancy name
+    
+    reaper.SetTrackColor(newTrack, reaper.ColorToNative(0, 0, 0)|0x100000) --give it a fancy color
+    
+    reaper.SetMediaTrackInfo_Value(newTrack, 'I_HEIGHTOVERRIDE', 28) --make the track small
+    reaper.SetMediaTrackInfo_Value(newTrack, 'B_HEIGHTLOCK', 1) --lock its height
 
 	return newTrack
 end
@@ -125,10 +111,12 @@ function main()
 
 	reaper.PreventUIRefresh(-1)
 
-	--auto record arm resample track and start recording
-	reaper.Main_OnCommand(40737, 0)
-	reaper.Main_OnCommand(transportRecordCommandID, 0)
+	--record into new track
+    local SWSRenderCommand = reaper.NamedCommandLookup('_SWS_AWRENDERSTEREOSMART')
+    reaper.Main_OnCommand(SWSRenderCommand, 0)
 end
 
+reaper.Undo_BeginBlock()
 main()
+reaper.Undo_EndBlock(scriptTitle, -1)
 

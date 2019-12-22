@@ -1,5 +1,5 @@
 --[[
- * ReaScript Name: BirdBird_Disable Repeat.lua
+ * ReaScript Name: Disable Repeat.lua
  * Author: BirdBird
  * Licence: GPL v3
  * REAPER: 6.0

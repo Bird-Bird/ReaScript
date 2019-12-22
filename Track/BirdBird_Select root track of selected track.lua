@@ -1,5 +1,5 @@
 --[[
- * ReaScript Name: BirdBird_Select root track of selected track.lua
+ * ReaScript Name: Select root track of selected track.lua
  * Author: BirdBird
  * Licence: GPL v3
  * REAPER: 6.0

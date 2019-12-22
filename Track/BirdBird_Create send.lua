@@ -1,5 +1,5 @@
 --[[
- * ReaScript Name: BirdBird_Create send.lua
+ * ReaScript Name: Create send.lua
  * Author: BirdBird
  * Licence: GPL v3
  * REAPER: 6.0

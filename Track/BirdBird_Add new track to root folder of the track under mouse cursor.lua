@@ -1,5 +1,5 @@
 --[[
- * ReaScript Name: BirdBird_Add new track to root folder of the track under mouse cursor.lua
+ * ReaScript Name: Add new track to root folder of the track under mouse cursor.lua
  * Author: BirdBird
  * Licence: GPL v3
  * REAPER: 6.0

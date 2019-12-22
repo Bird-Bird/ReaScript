@@ -1,5 +1,5 @@
 --[[
- * ReaScript Name: BirdBird_Adjust velocity for selected or closest notes (Mousewheel).lua
+ * ReaScript Name: Adjust velocity for selected or closest notes (Mousewheel).lua
  * Author: BirdBird
  * Licence: GPL v3
  * REAPER: 6.0

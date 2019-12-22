@@ -1,5 +1,5 @@
 --[[
- * ReaScript Name: BirdBird_Open MIDI Editor with custom settings (Scroll, Zoom, Snap).lua
+ * ReaScript Name: Open MIDI Editor with custom settings (Scroll, Zoom, Snap).lua
  * Author: BirdBird
  * Licence: GPL v3
  * REAPER: 6.0

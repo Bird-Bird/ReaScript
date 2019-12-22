@@ -1,5 +1,5 @@
 --[[
- * ReaScript Name: BirdBird_Quick MIDI Preview.lua
+ * ReaScript Name: Quick MIDI Preview.lua
  * Author: BirdBird
  * Licence: GPL v3
  * REAPER: 6.0

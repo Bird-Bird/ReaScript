@@ -1,5 +1,5 @@
 --[[
- * ReaScript Name: BirdBird_Set time selection to active MIDI item and enable repeat.lua
+ * ReaScript Name: Set time selection to active MIDI item and enable repeat.lua
  * Author: BirdBird
  * Licence: GPL v3
  * REAPER: 6.0

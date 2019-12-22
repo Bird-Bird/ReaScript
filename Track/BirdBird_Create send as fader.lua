@@ -1,5 +1,5 @@
 --[[
- * ReaScript Name: BirdBird_Create send as fader.lua
+ * ReaScript Name: Create send as fader.lua
  * Author: BirdBird
  * Licence: GPL v3
  * REAPER: 6.0

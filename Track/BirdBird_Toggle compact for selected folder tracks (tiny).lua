@@ -1,5 +1,5 @@
 --[[
- * ReaScript Name: BirdBird_Toggle compact for selected folder tracks (tiny).lua
+ * ReaScript Name: Toggle compact for selected folder tracks (tiny).lua
  * Author: BirdBird
  * Licence: GPL v3
  * REAPER: 6.0

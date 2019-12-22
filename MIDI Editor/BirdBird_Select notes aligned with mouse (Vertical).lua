@@ -1,5 +1,5 @@
 --[[
- * ReaScript Name: BirdBird_Select notes aligned with mouse (Vertical).lua
+ * ReaScript Name: Select notes aligned with mouse (Vertical).lua
  * Author: BirdBird
  * Licence: GPL v3
  * REAPER: 6.0
