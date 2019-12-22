@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="FooBar Scripts" commit="dd3c4a3b3f9200b111f8f0a28ddfbcb56d39beda">
+<index version="1" name="BirdBird Scripts" commit="dd3c4a3b3f9200b111f8f0a28ddfbcb56d39beda">
   <category name="MIDI Editor">
     <reapack name="BirdBird_Adjust velocity for selected or closest notes (Mousewheel).lua" type="script" desc="BirdBird_Adjust velocity for selected or closest notes (Mousewheel).lua">
       <version name="1.0" author="BirdBird" time="2019-12-22T01:59:38Z">
