@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="BirdBird Scripts" commit="dd3c4a3b3f9200b111f8f0a28ddfbcb56d39beda">
+<index version="1" name="BirdBird Scripts" commit="b542c162f3f090505eed38e7d807f769dcb53d9c">
+  <category name="Items Editing">
+    <reapack name="BirdBİrd_Smart duplicate relative to grid (Delete overlapping media).lua" type="script" desc="Smart duplicate relative to grid (Delete overlapping media).lua">
+      <version name="1.0" author="MPL, BirdBird mod" time="2019-12-22T04:31:47Z">
+        <changelog><![CDATA[+ Initial Release]]></changelog>
+        <source main="main">https://github.com/Bird-Bird/ReaScript/raw/b542c162f3f090505eed38e7d807f769dcb53d9c/Items%20Editing/BirdB%C4%B0rd_Smart%20duplicate%20relative%20to%20grid%20(Delete%20overlapping%20media).lua</source>
+      </version>
+    </reapack>
+  </category>
   <category name="MIDI Editor">
-    <reapack name="BirdBird_Adjust velocity for selected or closest notes (Mousewheel).lua" type="script" desc="BirdBird_Adjust velocity for selected or closest notes (Mousewheel).lua">
+    <reapack name="BirdBird_Adjust velocity for selected or closest notes (Mousewheel).lua" type="script" desc="Adjust velocity for selected or closest notes (Mousewheel).lua">
       <version name="1.0" author="BirdBird" time="2019-12-22T01:59:38Z">
         <changelog><![CDATA[+ Initial Release]]></changelog>
         <source main="midi_editor">https://github.com/Bird-Bird/ReaScript/raw/dd3c4a3b3f9200b111f8f0a28ddfbcb56d39beda/MIDI%20Editor/BirdBird_Adjust%20velocity%20for%20selected%20or%20closest%20notes%20(Mousewheel).lua</source>
@@ -13,31 +21,31 @@
         <source main="midi_editor">https://github.com/Bird-Bird/ReaScript/raw/dd3c4a3b3f9200b111f8f0a28ddfbcb56d39beda/MIDI%20Editor/BirdBird_Nudge%20selected%20or%20closest%20notes%20(Mousewheel).lua</source>
       </version>
     </reapack>
-    <reapack name="BirdBird_Open MIDI Editor with custom settings (Scroll, Zoom, Snap).lua" type="script" desc="BirdBird_Open MIDI Editor with custom settings (Scroll, Zoom, Snap).lua">
+    <reapack name="BirdBird_Open MIDI Editor with custom settings (Scroll, Zoom, Snap).lua" type="script" desc="Open MIDI Editor with custom settings (Scroll, Zoom, Snap).lua">
       <version name="1.0" author="BirdBird" time="2019-12-22T01:59:38Z">
         <changelog><![CDATA[+ Initial Release]]></changelog>
         <source main="midi_editor">https://github.com/Bird-Bird/ReaScript/raw/dd3c4a3b3f9200b111f8f0a28ddfbcb56d39beda/MIDI%20Editor/BirdBird_Open%20MIDI%20Editor%20with%20custom%20settings%20(Scroll,%20Zoom,%20Snap).lua</source>
       </version>
     </reapack>
-    <reapack name="BirdBird_Quick MIDI Preview.lua" type="script" desc="BirdBird_Quick MIDI Preview.lua">
+    <reapack name="BirdBird_Quick MIDI Preview.lua" type="script" desc="Quick MIDI Preview.lua">
       <version name="1.0" author="BirdBird" time="2019-12-22T01:59:38Z">
         <changelog><![CDATA[+ Initial Release]]></changelog>
         <source main="midi_editor">https://github.com/Bird-Bird/ReaScript/raw/dd3c4a3b3f9200b111f8f0a28ddfbcb56d39beda/MIDI%20Editor/BirdBird_Quick%20MIDI%20Preview.lua</source>
       </version>
     </reapack>
-    <reapack name="BirdBird_Select notes aligned with mouse (Vertical).lua" type="script" desc="BirdBird_Select notes aligned with mouse (Vertical).lua">
+    <reapack name="BirdBird_Select notes aligned with mouse (Vertical).lua" type="script" desc="Select notes aligned with mouse (Vertical).lua">
       <version name="1.0" author="BirdBird" time="2019-12-22T01:59:38Z">
         <changelog><![CDATA[+ Initial Release]]></changelog>
         <source main="midi_editor">https://github.com/Bird-Bird/ReaScript/raw/dd3c4a3b3f9200b111f8f0a28ddfbcb56d39beda/MIDI%20Editor/BirdBird_Select%20notes%20aligned%20with%20mouse%20(Vertical).lua</source>
       </version>
     </reapack>
-    <reapack name="BirdBird_Select notes under edit cursor.lua" type="script" desc="BirdBird_Select notes under edit cursor.lua">
+    <reapack name="BirdBird_Select notes under edit cursor.lua" type="script" desc="Select notes under edit cursor.lua">
       <version name="1.0" author="BirdBird" time="2019-12-22T01:59:38Z">
         <changelog><![CDATA[+ Initial Release]]></changelog>
         <source main="midi_editor">https://github.com/Bird-Bird/ReaScript/raw/dd3c4a3b3f9200b111f8f0a28ddfbcb56d39beda/MIDI%20Editor/BirdBird_Select%20notes%20under%20edit%20cursor.lua</source>
       </version>
     </reapack>
-    <reapack name="BirdBird_Set time selection to active MIDI item and enable repeat.lua" type="script" desc="BirdBird_Set time selection to active MIDI item and enable repeat.lua">
+    <reapack name="BirdBird_Set time selection to active MIDI item and enable repeat.lua" type="script" desc="Set time selection to active MIDI item and enable repeat.lua">
       <version name="1.0" author="BirdBird" time="2019-12-22T01:59:38Z">
         <changelog><![CDATA[+ Initial Release]]></changelog>
         <source main="midi_editor">https://github.com/Bird-Bird/ReaScript/raw/dd3c4a3b3f9200b111f8f0a28ddfbcb56d39beda/MIDI%20Editor/BirdBird_Set%20time%20selection%20to%20active%20MIDI%20item%20and%20enable%20repeat.lua</source>
@@ -45,37 +53,37 @@
     </reapack>
   </category>
   <category name="Track">
-    <reapack name="BirdBird_Add new track to root folder of the track under mouse cursor.lua" type="script" desc="BirdBird_Add new track to root folder of the track under mouse cursor.lua">
+    <reapack name="BirdBird_Add new track to root folder of the track under mouse cursor.lua" type="script" desc="Add new track to root folder of the track under mouse cursor.lua">
       <version name="1.0" author="BirdBird" time="2019-12-22T01:59:38Z">
         <changelog><![CDATA[+ Initial Release]]></changelog>
         <source main="main">https://github.com/Bird-Bird/ReaScript/raw/dd3c4a3b3f9200b111f8f0a28ddfbcb56d39beda/Track/BirdBird_Add%20new%20track%20to%20root%20folder%20of%20the%20track%20under%20mouse%20cursor.lua</source>
       </version>
     </reapack>
-    <reapack name="BirdBird_Create send as fader.lua" type="script" desc="BirdBird_Create send as fader.lua">
+    <reapack name="BirdBird_Create send as fader.lua" type="script" desc="Create send as fader.lua">
       <version name="1.0" author="BirdBird" time="2019-12-22T01:59:38Z">
         <changelog><![CDATA[+ Initial Release]]></changelog>
         <source main="main">https://github.com/Bird-Bird/ReaScript/raw/dd3c4a3b3f9200b111f8f0a28ddfbcb56d39beda/Track/BirdBird_Create%20send%20as%20fader.lua</source>
       </version>
     </reapack>
-    <reapack name="BirdBird_Create send.lua" type="script" desc="BirdBird_Create send.lua">
+    <reapack name="BirdBird_Create send.lua" type="script" desc="Create send.lua">
       <version name="1.0" author="BirdBird" time="2019-12-22T01:59:38Z">
         <changelog><![CDATA[+ Initial Release]]></changelog>
         <source main="main">https://github.com/Bird-Bird/ReaScript/raw/dd3c4a3b3f9200b111f8f0a28ddfbcb56d39beda/Track/BirdBird_Create%20send.lua</source>
       </version>
     </reapack>
-    <reapack name="BirdBird_Select root track of selected track.lua" type="script" desc="BirdBird_Select root track of selected track.lua">
+    <reapack name="BirdBird_Select root track of selected track.lua" type="script" desc="Select root track of selected track.lua">
       <version name="1.0" author="BirdBird" time="2019-12-22T01:59:38Z">
         <changelog><![CDATA[+ Initial Release]]></changelog>
         <source main="main">https://github.com/Bird-Bird/ReaScript/raw/dd3c4a3b3f9200b111f8f0a28ddfbcb56d39beda/Track/BirdBird_Select%20root%20track%20of%20selected%20track.lua</source>
       </version>
     </reapack>
-    <reapack name="BirdBird_Toggle compact for selected folder tracks (tiny).lua" type="script" desc="BirdBird_Toggle compact for selected folder tracks (tiny).lua">
+    <reapack name="BirdBird_Toggle compact for selected folder tracks (tiny).lua" type="script" desc="Toggle compact for selected folder tracks (tiny).lua">
       <version name="1.0" author="BirdBird" time="2019-12-22T01:59:38Z">
         <changelog><![CDATA[+ Initial Release]]></changelog>
         <source main="main">https://github.com/Bird-Bird/ReaScript/raw/dd3c4a3b3f9200b111f8f0a28ddfbcb56d39beda/Track/BirdBird_Toggle%20compact%20for%20selected%20folder%20tracks%20(tiny).lua</source>
       </version>
     </reapack>
-    <reapack name="BirdBİrd_Select folder children.lua" type="script" desc="BirdBird_Select Folder Children.lua">
+    <reapack name="BirdBİrd_Select folder children.lua" type="script" desc="Select Folder Children.lua">
       <version name="1.0" author="BirdBird" time="2019-12-22T01:59:38Z">
         <changelog><![CDATA[+ Initial Release]]></changelog>
         <source main="main">https://github.com/Bird-Bird/ReaScript/raw/dd3c4a3b3f9200b111f8f0a28ddfbcb56d39beda/Track/BirdB%C4%B0rd_Select%20folder%20children.lua</source>
@@ -83,13 +91,13 @@
     </reapack>
   </category>
   <category name="Utility">
-    <reapack name="BirdBird_Disable repeat.lua" type="script" desc="BirdBird_Disable Repeat.lua">
+    <reapack name="BirdBird_Disable repeat.lua" type="script" desc="Disable Repeat.lua">
       <version name="1.0" author="BirdBird" time="2019-12-22T01:59:38Z">
         <changelog><![CDATA[+ Initial Release]]></changelog>
         <source main="main">https://github.com/Bird-Bird/ReaScript/raw/dd3c4a3b3f9200b111f8f0a28ddfbcb56d39beda/Utility/BirdBird_Disable%20repeat.lua</source>
       </version>
     </reapack>
-    <reapack name="BirdBird_Enable repeat.lua" type="script" desc="BirdBird_Enable Repeat.lua">
+    <reapack name="BirdBird_Enable repeat.lua" type="script" desc="Enable Repeat.lua">
       <version name="1.0" author="BirdBird" time="2019-12-22T01:59:38Z">
         <changelog><![CDATA[+ Initial Release]]></changelog>
         <source main="main">https://github.com/Bird-Bird/ReaScript/raw/dd3c4a3b3f9200b111f8f0a28ddfbcb56d39beda/Utility/BirdBird_Enable%20repeat.lua</source>
@@ -97,10 +105,20 @@
     </reapack>
   </category>
   <category name="Workflow">
+    <reapack name="BirdBird_Quick Resample time selection (Render to new track).lua" type="script" desc="Quick Resample time selection (Render to new track).lua">
+      <version name="1.0" author="BirdBird" time="2019-12-22T04:31:47Z">
+        <changelog><![CDATA[+ Initial Release]]></changelog>
+        <source main="main">https://github.com/Bird-Bird/ReaScript/raw/b542c162f3f090505eed38e7d807f769dcb53d9c/Workflow/BirdBird_Quick%20Resample%20time%20selection%20(Render%20to%20new%20track).lua</source>
+      </version>
+    </reapack>
     <reapack name="BirdBird_Quick Resample.lua" type="script" desc="Quick Resample.lua">
       <version name="1.0" author="BirdBird" time="2019-12-22T01:59:38Z">
         <changelog><![CDATA[+ Initial Release]]></changelog>
         <source main="main">https://github.com/Bird-Bird/ReaScript/raw/dd3c4a3b3f9200b111f8f0a28ddfbcb56d39beda/Workflow/BirdBird_Quick%20Resample.lua</source>
+      </version>
+      <version name="1.3" author="BirdBird" time="2019-12-22T04:31:47Z">
+        <changelog><![CDATA[+ Fixed workflow issues with record mode]]></changelog>
+        <source main="main">https://github.com/Bird-Bird/ReaScript/raw/b542c162f3f090505eed38e7d807f769dcb53d9c/Workflow/BirdBird_Quick%20Resample.lua</source>
       </version>
     </reapack>
   </category>
