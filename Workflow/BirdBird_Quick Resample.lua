@@ -1,16 +1,19 @@
-
 --[[
-Author: BirdBird
-Title: Quick Resample
-Usage: Select the tracks you want to resample and run the action. The script will create a new track called "Resample🎤" right above the last selected track and record it.
-The "Resample🎤" track is designed to be a container for holding the recordings, move the recordings over to other tracks to do external processing on them. 
-The master/parent send on the "Resample🎤" track is disabled by default.
-When running the script more than once the script tries to reuse the "Resample🎤" track. You can take advantage of this and tweak the track to your liking.
-Version: 1.0
-]]
+ * ReaScript Name: Quick Resample.lua
+ * Author: BirdBird
+ * Licence: GPL v3
+ * REAPER: 6.0
+ * Extensions: None
+ * Version: 1.0
+--]]
+ 
+--[[
+ * Changelog:
+ * v1.0 (2019-12-19)
+ 	+ Initial Release
+--]]
 
--------------------------------------------------
-
+--=====UTILITY=====--
 local resampleTrackName = 'Resample🎤'
 local insertNewTrackCommandID = 40001
 local unselectAllTracksCommandID = 40297
@@ -59,6 +62,7 @@ function clearReceives(track)
 	end
 end
 
+--=====UTILITY=====--
 function main()
     reaper.PreventUIRefresh(1)
 
