@@ -44,8 +44,17 @@ end
 
 --=====MAIN=====--
 local lastProjectChangeCount = 0
+local lastProject = ''
 function main()
     local projectChangeCount = reaper.GetProjectStateChangeCount(0)
+    local project , projfn = reaper.EnumProjects(-1)
+
+    --track if current project has changed
+    if project ~= lastProject then
+        lastProjectChangeCount = projectChangeCount
+        lastProject = project
+    end
+    
     if projectChangeCount > lastProjectChangeCount then
         local lastAction = reaper.Undo_CanUndo2(0) --get last action
         if lastAction ~= nil then      
@@ -54,7 +63,6 @@ function main()
         
         lastProjectChangeCount = projectChangeCount -- store "Project State Change Count" for the next pass
     end
-    
     reaper.defer(main)    
 end
 

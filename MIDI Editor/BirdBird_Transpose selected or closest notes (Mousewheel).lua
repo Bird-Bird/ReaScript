@@ -1,5 +1,5 @@
 --[[
- * ReaScript Name: Nudge selected or closest notes (Mousewheel).lua
+ * ReaScript Name: Transpose selected or closest notes (Mousewheel).lua
  * Author: BirdBird
  * Licence: GPL v3
  * REAPER: 6.0
@@ -14,9 +14,8 @@
 --]]
 
 --=====Tweak these if you need to=====--
-local noteRange = 3 --range of notes to search vertically
+local noteRange = 10 --range of notes to search vertically
 local horizontalRange = 3000 --range of notes to search horizontally, in PPQ
-local sensitivity = 20 --PPQ steps move the notes each mouse roll
 
 --=====UTILITY=====--
 function p(msg) reaper.ShowConsoleMsg(tostring(msg)..'\n')end
@@ -61,9 +60,9 @@ function main()
             
             if selected == true then
                 if mouse_scroll > 0 then 
-                    reaper.FNG_SetMidiNoteIntProperty(note, "POSITION", startppqpos - sensitivity) --move note right
+                    reaper.FNG_SetMidiNoteIntProperty(note, "PITCH", pitch + 1) --move note up
                 else
-                    reaper.FNG_SetMidiNoteIntProperty(note, "POSITION", startppqpos + sensitivity) --move note left
+                    reaper.FNG_SetMidiNoteIntProperty(note, "PITCH", pitch - 1) --move note down
                 end
             end
         end  
@@ -73,7 +72,7 @@ function main()
         local distanceMinimum = 1000000000000
         local closestNoteRow = 1000000
         local hasWrappingNote = false
-        local notePosition
+        local notePitch
         for i = 0, noteCount-1 do --for all notes
             local note = reaper.FNG_GetMidiNote( takeAlloc, i )
             local retval, selected, muted, startppqpos, endppqpos, chan, pitch, vel = reaper.MIDI_GetNote( activeTake, i )
@@ -93,13 +92,13 @@ function main()
                         hasWrappingNote = true
                         closestNoteRow = noteRowDistance
                         closestNote = note
-                        notePosition = startppqpos
+                        notePitch = pitch
                     end
                 elseif hasWrappingNote == false then
                     if minDistance < distanceMinimum then
                         distanceMinimum = minDistance
                         closestNote = note
-                        notePosition = startppqpos
+                        notePitch = pitch
                     end
                 end
             end
@@ -109,9 +108,9 @@ function main()
         if closestNote ~= nil then
             _,_,_,_,_,_,mouse_scroll  = reaper.get_action_context() 
             if mouse_scroll > 0 then 
-                reaper.FNG_SetMidiNoteIntProperty(closestNote, "POSITION", notePosition - sensitivity) --move note left
+                reaper.FNG_SetMidiNoteIntProperty(closestNote, "PITCH", notePitch + 1) --move note left
             else
-                reaper.FNG_SetMidiNoteIntProperty(closestNote, "POSITION", notePosition + sensitivity) --move note right
+                reaper.FNG_SetMidiNoteIntProperty(closestNote, "PITCH", notePitch - 1) --move note right
             end
         end
     end
