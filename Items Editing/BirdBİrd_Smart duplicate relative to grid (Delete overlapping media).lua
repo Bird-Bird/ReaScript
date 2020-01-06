@@ -120,7 +120,7 @@ function main()
 
 	local tracksWithItems = getTracksWithMediaItemsSelected()
 	saveItemSelection()
-	local loopStart, loopEnd = reaper.GetSet_LoopTimeRange(0, 1, 1, 1, 0) --save time selection
+	local loopStart, loopEnd = reaper.GetSet_LoopTimeRange(0, false, 1, 1, 0) --save time selection
 	
 	startPosition = math.huge
     endPosition = 0
@@ -157,7 +157,7 @@ function main()
     local duplicateStartPos = nextDivision
     local duplicateEndPos = nextDivision + (nextDivision - previousDivision)
 	
-	reaper.GetSet_LoopTimeRange(1, 1, duplicateStartPos, duplicateEndPos, 0) --make time selection
+	reaper.GetSet_LoopTimeRange(1, false, duplicateStartPos, duplicateEndPos, 0) --make time selection
 	
 	--select items in range
 	for i = 1, #tracksWithItems do
@@ -176,7 +176,7 @@ function main()
 	restoreItemSelection()
 	
 	reaper.ApplyNudge(0, 0, 5, 1, nudgeAmount , 0, 1)    
-	reaper.GetSet_LoopTimeRange(1, 1, loopStart, loopEnd, 0) --restore time selection
+	reaper.GetSet_LoopTimeRange(1, false, loopStart, loopEnd, 0) --restore time selection
 end
      
 reaper.Undo_BeginBlock()

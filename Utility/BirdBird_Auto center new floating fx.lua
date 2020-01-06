@@ -24,7 +24,7 @@ function p(msg) reaper.ShowConsoleMsg(tostring(msg)..'\n')end
 
 --=====FUNCTIONS=====--
 function onProjectStateChange(action)
-    if string.match( action, '^Add FX: Track' ) or action == 'Insert virtual instrument on new track' then
+    if string.match( action, '^Add FX: Track' ) or (action == 'Insert virtual instrument on new track' or string.match( action, 'FAST FX FINDER')) then
         centerActiveFloatingFX()
     end
 end
