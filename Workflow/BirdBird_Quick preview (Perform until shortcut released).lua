@@ -10,28 +10,62 @@
 --[[
  * Changelog:
  * v1.0 (2020-01-10)
- 	+ Initial Release
+     + Initial Release
+ * v1.1 (2020-01-10)
+     + Fix track selection
 --]]
 
 local followMouse = true
 local soloTrackUnderMouse = false
 
 local startCursorPosition
-local midiEditor
 
 local selection = {}
 local track = nil
+
+function p(msg) reaper.ShowConsoleMsg(tostring(msg) .. '\n') end
+
+function getTrackUnderCursor()
+    reaper.PreventUIRefresh(-1)
+    
+    --save track selection
+    local selectedTracks = {}
+    local selectedTrackCount = reaper.CountSelectedTracks(0)
+    for i = 0, selectedTrackCount - 1 do 
+        local selectedTrack = reaper.GetSelectedTrack(0, i)
+        table.insert( selectedTracks, selectedTrack )
+    end
+
+    reaper.Main_OnCommand(40297, -1) -- unselect all tracks
+    reaper.Main_OnCommand(41110, -1) -- select track under mouse
+    local selectedTrack = reaper.GetSelectedTrack(0, 0)
+    reaper.Main_OnCommand(40297, -1) -- unselect all tracks
+
+    --restore track selection
+    for i = 1, #selectedTracks do
+        local t = selectedTracks[i]
+        reaper.SetTrackSelected(t, true)
+    end
+
+    reaper.PreventUIRefresh(1)
+
+    return selectedTrack
+end
+
 function init()
     startCursorPosition =  reaper.GetCursorPosition()
 
 
     local item, position = reaper.BR_ItemAtMouseCursor()
     local trackAtCursor, context, mousePosition = reaper.BR_TrackAtMouseCursor()
-    if context ~= 2 then
+
+    if context == 1 or context == 0 then
         return true
     end
 
     local startPosition = position
+    trackAtCursor = getTrackUnderCursor()
+    
     if item ~= nil and followMouse == false then
         local itemPosition = reaper.GetMediaItemInfo_Value(item, 'D_POSITION')
         startPosition = itemPosition
