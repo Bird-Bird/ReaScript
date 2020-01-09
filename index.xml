@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="BirdBird Scripts" commit="10757812a334d1ef3d7a84c3033980b52d93afb7">
+<index version="1" name="BirdBird Scripts" commit="8f27851b865f6e874fd50652f537b1e23ef1509b">
   <category name="Items Editing">
     <reapack name="BirdBİrd_Smart duplicate relative to grid (Delete overlapping media).lua" type="script" desc="Smart duplicate relative to grid (Delete overlapping media).lua">
       <version name="1.0" author="MPL, BirdBird mod" time="2019-12-22T04:31:47Z">
@@ -136,6 +136,10 @@
       <version name="1.0" author="BirdBird" time="2020-01-09T21:33:33Z">
         <changelog><![CDATA[+ Initial Release]]></changelog>
         <source main="main">https://github.com/Bird-Bird/ReaScript/raw/10757812a334d1ef3d7a84c3033980b52d93afb7/Workflow/BirdBird_Quick%20preview%20(Perform%20until%20shortcut%20released).lua</source>
+      </version>
+      <version name="1.1" author="BirdBird" time="2020-01-09T22:16:43Z">
+        <changelog><![CDATA[+ Fix track selection]]></changelog>
+        <source main="main">https://github.com/Bird-Bird/ReaScript/raw/8f27851b865f6e874fd50652f537b1e23ef1509b/Workflow/BirdBird_Quick%20preview%20(Perform%20until%20shortcut%20released).lua</source>
       </version>
     </reapack>
     <reapack name="BirdBird_Quick Resample time selection (Render to new track).lua" type="script" desc="Quick Resample time selection (Render to new track).lua">
