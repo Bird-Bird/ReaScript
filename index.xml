@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="BirdBird Scripts" commit="4c15c45fd4189a362779e6ff110803f524386e97">
+<index version="1" name="BirdBird Scripts" commit="10757812a334d1ef3d7a84c3033980b52d93afb7">
   <category name="Items Editing">
     <reapack name="BirdBİrd_Smart duplicate relative to grid (Delete overlapping media).lua" type="script" desc="Smart duplicate relative to grid (Delete overlapping media).lua">
       <version name="1.0" author="MPL, BirdBird mod" time="2019-12-22T04:31:47Z">
@@ -130,6 +130,12 @@
       <version name="1.0" author="BirdBird" time="2020-01-05T09:46:29Z">
         <changelog><![CDATA[+ Initial Release]]></changelog>
         <source main="main">https://github.com/Bird-Bird/ReaScript/raw/3650e9b6c0de934df1d7fa67e102f96d32091635/Workflow/BirdBird_Initialize%20dragged%20audio%20item%20with%20custom%20settings.lua</source>
+      </version>
+    </reapack>
+    <reapack name="BirdBird_Quick preview (Perform until shortcut released).lua" type="script" desc="Quick preview (Perform until shortcut released).lua">
+      <version name="1.0" author="BirdBird" time="2020-01-09T21:33:33Z">
+        <changelog><![CDATA[+ Initial Release]]></changelog>
+        <source main="main">https://github.com/Bird-Bird/ReaScript/raw/10757812a334d1ef3d7a84c3033980b52d93afb7/Workflow/BirdBird_Quick%20preview%20(Perform%20until%20shortcut%20released).lua</source>
       </version>
     </reapack>
     <reapack name="BirdBird_Quick Resample time selection (Render to new track).lua" type="script" desc="Quick Resample time selection (Render to new track).lua">
