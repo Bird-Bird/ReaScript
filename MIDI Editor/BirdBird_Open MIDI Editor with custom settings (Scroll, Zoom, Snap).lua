@@ -4,13 +4,15 @@
  * Licence: GPL v3
  * REAPER: 6.0
  * Extensions: None
- * Version: 1.0
+ * Version: 1.1
 --]]
  
 --[[
  * Changelog:
  * v1.0 (2019-12-19)
- 	+ Initial Release
+     + Initial Release
+ * v1.1 (2020-01-20)
+ 	 + Better cursor movement
 --]]
 
 --=====Tweak these if you need to=====--
@@ -63,7 +65,12 @@ function main()
     local activeTake = reaper.GetMediaItemTake(selectedItem, 0)
 
     if reaper.TakeIsMIDI(activeTake) == true then
-        if moveEditCursorToItemStart == true then
+        local cursorPosition = reaper.GetCursorPosition()
+        local itemStart = reaper.GetMediaItemInfo_Value(selectedItem, 'D_POSITION')
+        local itemEnd = itemStart + reaper.GetMediaItemInfo_Value(selectedItem, 'D_LENGTH')
+        local cursorInRange = cursorPosition >= itemStart and cursorPosition < itemEnd
+        
+        if moveEditCursorToItemStart == true and cursorInRange == false then
             reaper.Main_OnCommand(41173, 0) --move cursor to start of item
         end
         
