@@ -4,7 +4,7 @@
  * Licence: GPL v3
  * REAPER: 6.0
  * Extensions: None
- * Version: 1.4
+ * Version: 1.5
 --]]
  
 --[[
@@ -15,6 +15,8 @@
 	 + Added multiout recording support
  * v1.3
 	 + Fixed workflow issues with record mode
+ * v1.4
+	 + Fixed more workflow issues
 --]]
 
 --=====UTILITY=====--
@@ -57,8 +59,8 @@ function createNewResampleTrack()
 	reaper.SetMediaTrackInfo_Value(newTrack, 'I_RECINPUT', -1)
 	
 	--disable record monitoring
-	reaper.SetMediaTrackInfo_Value(newTrack, 'I_RECMON', 0)
 	reaper.SetMediaTrackInfo_Value(newTrack, 'I_RECMONITEMS', 0)
+	reaper.SetMediaTrackInfo_Value(newTrack, 'I_RECMON', 0)
 	
 	--enable free item positioning
 	reaper.SetMediaTrackInfo_Value(newTrack, 'B_FREEMODE', 1)
@@ -122,11 +124,17 @@ function main()
 	local lastSelectedSourceTrack = lastTouchedTrack
 	local lastSelectedSourceTrackID = reaper.GetMediaTrackInfo_Value(lastSelectedSourceTrack, "IP_TRACKNUMBER")
 	reaper.ReorderSelectedTracks(lastSelectedSourceTrackID-1, 2)
-
+	reaper.SetMediaTrackInfo_Value(resampleTrack, 'I_RECARM', 1)
+	
 	reaper.PreventUIRefresh(-1)
 
-	--auto record arm resample track and start recording
-	reaper.Main_OnCommand(40737, 0)
+	--restore selection
+	reaper.Main_OnCommand(40297, -1) --unselect all tracks
+	for i=1, #selectedTracks do --restore track selection
+		local track = selectedTracks[i]
+		reaper.SetTrackSelected(track, true)
+	end
+	
 	reaper.Main_OnCommand(transportRecordCommandID, 0)
 end
 
