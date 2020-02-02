@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="BirdBird Scripts" commit="906d89ba13c88aa23fa0983ef5663d6880508203">
+<index version="1" name="BirdBird Scripts" commit="3f8e6abd6be042176e47ce98677f40dcb8af390e">
   <category name="Items Editing">
+    <reapack name="BirdBird_Smart reverse.lua" type="script" desc="Smart reverse.lua">
+      <version name="1.0" author="BirdBird" time="2020-02-02T18:56:01Z">
+        <changelog><![CDATA[+ Initial Release]]></changelog>
+        <source main="main">https://github.com/Bird-Bird/ReaScript/raw/3f8e6abd6be042176e47ce98677f40dcb8af390e/Items%20Editing/BirdBird_Smart%20reverse.lua</source>
+      </version>
+    </reapack>
     <reapack name="BirdBİrd_Smart duplicate relative to grid (Delete overlapping media).lua" type="script" desc="Smart duplicate relative to grid (Delete overlapping media).lua">
       <version name="1.0" author="MPL, BirdBird mod" time="2019-12-22T04:31:47Z">
         <changelog><![CDATA[+ Initial Release]]></changelog>
