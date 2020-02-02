@@ -4,26 +4,45 @@
  * Licence: GPL v3
  * REAPER: 6.0
  * Extensions: None
- * Version: 1.1
+ * Version: 1.2
 --]]
  
 --[[
  * Changelog:
  * v1.0 (2020-01-10)
      + Initial Release
+ * v1.1 (2020-02-02)
+     + Improve deletion
 --]]
 
+local steps = 50 --increasing this may catch more items, at the cost of performance
 function init()
     reaper.Undo_BeginBlock()
 end
 
+function p(msg) reaper.ShowConsoleMsg(tostring(msg) .. '\n') end
+
+lastX, lastY = reaper.GetMousePosition()
 function update()
     local x,y = reaper.GetMousePosition()
-    local item ,take = reaper.GetItemFromPoint(x, y, false)
-    if item ~= nil then
-        reaper.DeleteTrackMediaItem(reaper.GetMediaItemTrack(item), item)
-        reaper.UpdateArrange()
+    for i = 1, steps do
+        local t = (1/steps) * i
+        
+        local ix = math.floor(lerp(lastX ,x, t))
+        local iy = math.floor(lerp(lastY ,y, t))
+
+        local item ,take = reaper.GetItemFromPoint(ix, iy, false)
+        if item ~= nil then
+            reaper.DeleteTrackMediaItem(reaper.GetMediaItemTrack(item), item)
+            reaper.UpdateArrange()
+        end
     end
+    lastX = x
+    lastY = y
+end
+
+function lerp(a, b, c)
+	return a + (b - a) * c
 end
 
 function exit()
