@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="BirdBird Scripts" commit="3f8e6abd6be042176e47ce98677f40dcb8af390e">
+<index version="1" name="BirdBird Scripts" commit="0607371ecd53085a56643f57516b12eaaab7e35b">
   <category name="Items Editing">
     <reapack name="BirdBird_Smart reverse.lua" type="script" desc="Smart reverse.lua">
       <version name="1.0" author="BirdBird" time="2020-02-02T18:56:01Z">
         <changelog><![CDATA[+ Initial Release]]></changelog>
         <source main="main">https://github.com/Bird-Bird/ReaScript/raw/3f8e6abd6be042176e47ce98677f40dcb8af390e/Items%20Editing/BirdBird_Smart%20reverse.lua</source>
+      </version>
+      <version name="1.1" author="BirdBird" time="2020-02-10T03:14:44Z">
+        <changelog><![CDATA[+ Improved fade behaviour]]></changelog>
+        <source main="main">https://github.com/Bird-Bird/ReaScript/raw/0607371ecd53085a56643f57516b12eaaab7e35b/Items%20Editing/BirdBird_Smart%20reverse.lua</source>
       </version>
     </reapack>
     <reapack name="BirdBİrd_Smart duplicate relative to grid (Delete overlapping media).lua" type="script" desc="Smart duplicate relative to grid (Delete overlapping media).lua">
