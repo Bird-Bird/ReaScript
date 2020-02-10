@@ -10,7 +10,9 @@
 --[[
 * Changelog:
 * v1.0 (2020-02-02)
-	+ Initial Release
+    + Initial Release
+* v1.1 (2020-10-02)
+    + Improved fade behaviour
 --]]
 
 function main()
@@ -30,6 +32,7 @@ function main()
         local take = reaper.GetMediaItemTake(item, 0)
         local retval, section, start, length, fade, reverse = reaper.BR_GetMediaSourceProperties( take )
         
+        --Offset item position
         local itemPos = reaper.GetMediaItemInfo_Value(item, 'D_POSITION')
         local itemLength = reaper.GetMediaItemInfo_Value(item, 'D_LENGTH')
         local itemEnd = itemPos + itemLength
@@ -37,8 +40,20 @@ function main()
         local targetPos = reverse and reaper.SnapToGrid(0, itemPos) or reaper.SnapToGrid(0, itemEnd) --snap end to closest if very close, otherwisse next
         local offset = reverse and targetPos - itemPos or targetPos - itemEnd        
         reaper.SetMediaItemInfo_Value(item, 'D_POSITION', itemPos + offset)
-        reaper.Main_OnCommand(41051, -1) --take reverse
+        
+        --Swap fades
+        local fadeInLength =  reaper.GetMediaItemInfo_Value(item, 'D_FADEINLEN')
+        local fadeInDir =     reaper.GetMediaItemInfo_Value(item, 'D_FADEINDIR')
+        local fadeOutLength = reaper.GetMediaItemInfo_Value(item, 'D_FADEOUTLEN')
+        local fadeOutDir =    reaper.GetMediaItemInfo_Value(item, 'D_FADEOUTDIR')
 
+        reaper.SetMediaItemInfo_Value(item, 'D_FADEINLEN', fadeOutLength)
+        reaper.SetMediaItemInfo_Value(item, 'D_FADEINDIR', fadeOutDir)
+        reaper.SetMediaItemInfo_Value(item, 'D_FADEOUTLEN', fadeInLength)
+        reaper.SetMediaItemInfo_Value(item, 'D_FADEOUTDIR', fadeInDir)
+        
+        reaper.Main_OnCommand(41051, -1) --take reverse
+        
         reaper.SetMediaItemSelected(item, false)
     end
 
