@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="BirdBird Scripts" commit="0607371ecd53085a56643f57516b12eaaab7e35b">
+<index version="1" name="BirdBird Scripts" commit="7a05eb7f093b402bb909eac29bb650fab459f5b2">
   <category name="Items Editing">
     <reapack name="BirdBird_Smart reverse.lua" type="script" desc="Smart reverse.lua">
       <version name="1.0" author="BirdBird" time="2020-02-02T18:56:01Z">
@@ -9,6 +9,10 @@
       <version name="1.1" author="BirdBird" time="2020-02-10T03:14:44Z">
         <changelog><![CDATA[+ Improved fade behaviour]]></changelog>
         <source main="main">https://github.com/Bird-Bird/ReaScript/raw/0607371ecd53085a56643f57516b12eaaab7e35b/Items%20Editing/BirdBird_Smart%20reverse.lua</source>
+      </version>
+      <version name="1.3" author="BirdBird" time="2020-02-10T06:12:48Z">
+        <changelog><![CDATA[+ Fix broken take envelope point offset for items with tweaked playrates]]></changelog>
+        <source main="main">https://github.com/Bird-Bird/ReaScript/raw/7a05eb7f093b402bb909eac29bb650fab459f5b2/Items%20Editing/BirdBird_Smart%20reverse.lua</source>
       </version>
     </reapack>
     <reapack name="BirdBİrd_Smart duplicate relative to grid (Delete overlapping media).lua" type="script" desc="Smart duplicate relative to grid (Delete overlapping media).lua">
@@ -136,6 +140,12 @@
       <version name="1.0" author="BirdBird" time="2019-12-22T01:59:38Z">
         <changelog><![CDATA[+ Initial Release]]></changelog>
         <source main="main">https://github.com/Bird-Bird/ReaScript/raw/dd3c4a3b3f9200b111f8f0a28ddfbcb56d39beda/Utility/BirdBird_Enable%20repeat.lua</source>
+      </version>
+    </reapack>
+    <reapack name="BirdBird_Print item state chunk.lua" type="script" desc="Print item state chunk">
+      <version name="1.0" author="BirdBird" time="2020-02-10T06:12:48Z">
+        <changelog><![CDATA[+ Initial Release]]></changelog>
+        <source main="main">https://github.com/Bird-Bird/ReaScript/raw/7a05eb7f093b402bb909eac29bb650fab459f5b2/Utility/BirdBird_Print%20item%20state%20chunk.lua</source>
       </version>
     </reapack>
   </category>
