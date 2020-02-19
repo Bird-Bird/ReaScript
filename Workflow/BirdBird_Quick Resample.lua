@@ -4,7 +4,7 @@
  * Licence: GPL v3
  * REAPER: 6.0
  * Extensions: None
- * Version: 1.5
+ * Version: 1.6
 --]]
  
 --[[
@@ -17,6 +17,8 @@
 	 + Fixed workflow issues with record mode
  * v1.4
 	 + Fixed more workflow issues
+ * v1.5
+	 + Fixed more workflow issues again
 --]]
 
 --=====UTILITY=====--
@@ -97,17 +99,15 @@ function main()
 		table.insert( selectedTracks, track)
 	end
 
-	--check/get resample track and select it
-	reaper.Main_OnCommand(unselectAllTracksCommandID, 0)
+	--create resample track
 	local resampleTrack = checkForResampleTrack()
 	if not resampleTrack then
 		resampleTrack = createNewResampleTrack()
 	end
-	reaper.Main_OnCommand(clearAutomaticRecordArmCommandID, 0)
-
+	
 	--clear receives on resample track
 	clearReceives(resampleTrack)
-
+	
 	--send selected tracks to resample track
 	for i=1, #selectedTracks do
 		local track = selectedTracks[i]
@@ -118,23 +118,26 @@ function main()
 			reaper.SetTrackSendInfo_Value( track, 0, sendID, 'I_SRCCHAN', j*2)
 		end
 	end
-
+	
 	--move resample track above the last touched track
-	reaper.SetTrackSelected(resampleTrack, true)
 	local lastSelectedSourceTrack = lastTouchedTrack
 	local lastSelectedSourceTrackID = reaper.GetMediaTrackInfo_Value(lastSelectedSourceTrack, "IP_TRACKNUMBER")
 	reaper.ReorderSelectedTracks(lastSelectedSourceTrackID-1, 2)
-	reaper.SetMediaTrackInfo_Value(resampleTrack, 'I_RECARM', 1)
 	
 	reaper.PreventUIRefresh(-1)
-
+	
 	--restore selection
-	reaper.Main_OnCommand(40297, -1) --unselect all tracks
+	reaper.Main_OnCommand(unselectAllTracksCommandID, 0) -- unselect all tracks
+	reaper.SetTrackSelected(resampleTrack, true)
+	reaper.Main_OnCommand(40737, 0) --auto record arm when track selected
+	
+	--reaper.Main_OnCommand(40297, -1) --unselect all tracks
 	for i=1, #selectedTracks do --restore track selection
 		local track = selectedTracks[i]
 		reaper.SetTrackSelected(track, true)
 	end
-	
+
+	--reaper.SetTrackSelected(resampleTrack, true)
 	reaper.Main_OnCommand(transportRecordCommandID, 0)
 end
 
