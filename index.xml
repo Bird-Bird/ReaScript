@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="BirdBird Scripts" commit="fceaeb390c27a990b6b84bf5974cf524019303d6">
+<index version="1" name="BirdBird Scripts" commit="fe414e4bce53a4477f9bf101c31a093949b2e505">
   <category name="Items Editing">
     <reapack name="BirdBird_Delete item under mouse.lua" type="script" desc="Delete item under mouse">
       <version name="1.0" author="BirdBird" time="2020-02-24T08:14:51Z">
         <changelog><![CDATA[+ Initial Release]]></changelog>
         <source main="main">https://github.com/Bird-Bird/ReaScript/raw/fceaeb390c27a990b6b84bf5974cf524019303d6/Items%20Editing/BirdBird_Delete%20item%20under%20mouse.lua</source>
+      </version>
+    </reapack>
+    <reapack name="BirdBird_Move selected items to mouse cursor (Perform until shortcut released).lua" type="script" desc="Move selected items to mouse cursor (Perform until shortcut released)">
+      <version name="1.1" author="BirdBird" time="2020-04-09T10:49:46Z">
+        <source main="main">https://github.com/Bird-Bird/ReaScript/raw/fe414e4bce53a4477f9bf101c31a093949b2e505/Items%20Editing/BirdBird_Move%20selected%20items%20to%20mouse%20cursor%20(Perform%20until%20shortcut%20released).lua</source>
+      </version>
+    </reapack>
+    <reapack name="BirdBird_Move selected items to mouse cursor.lua" type="script" desc="Move selected items to mouse cursor">
+      <version name="1.1" author="BirdBird" time="2020-04-09T10:49:46Z">
+        <source main="main">https://github.com/Bird-Bird/ReaScript/raw/fe414e4bce53a4477f9bf101c31a093949b2e505/Items%20Editing/BirdBird_Move%20selected%20items%20to%20mouse%20cursor.lua</source>
+      </version>
+    </reapack>
+    <reapack name="BirdBird_Offset item position (Perform until shortcut released).lua" type="script" desc="Offset item position (Perform until shortcut released)">
+      <version name="1.1" author="BirdBird" time="2020-04-09T10:49:46Z">
+        <source main="main">https://github.com/Bird-Bird/ReaScript/raw/fe414e4bce53a4477f9bf101c31a093949b2e505/Items%20Editing/BirdBird_Offset%20item%20position%20(Perform%20until%20shortcut%20released).lua</source>
       </version>
     </reapack>
     <reapack name="BirdBird_Smart reverse.lua" type="script" desc="Smart reverse.lua">
