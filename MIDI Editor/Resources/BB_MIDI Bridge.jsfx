@@ -1,0 +1,50 @@
+desc: MIDI Input bridge for Quick MIDI Preview.
+
+/**
+ * JSFX Name: BB_MIDI Bridge
+ * Author: BirdBird
+ * Licence: GPL v3
+ * REAPER: 6.0
+ * Version: 1.0
+ */
+
+/**
+ * Changelog:
+ * v1.0 (2020-04-09)
+  + Initial Release
+ */
+
+options:gmem=BB_MIDIPreview
+
+@init
+currentIndex = 3
+
+
+@slider
+
+
+@block
+//gmem[1] ------> init state
+//gmem[2] ------> target index
+//gmem[3...n]---> message buffer
+
+reorder = gmem[1];
+reorder == 1 ? (//Only run when reordering has been complete
+  maxCount = gmem[2];
+  while(currentIndex<maxCount)(
+    msg = gmem[currentIndex];
+    noteOn = msg & 0xFF;
+    pitch = (msg >> 8) & 0xFF;
+    vel = (msg >> 16) & 0xFF;
+
+    midisend(offset, noteOn, pitch, vel);
+
+    currentIndex+=1;
+    maxCount = gmem[2];//Always look ahead to avoid race condition
+  );
+);
+
+
+@sample //Pass-through audio
+spl0 = spl0;
+spl1 = spl1;
