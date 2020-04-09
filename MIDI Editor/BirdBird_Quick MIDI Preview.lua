@@ -23,7 +23,7 @@ function p(msg) reaper.ShowConsoleMsg('\n' .. tostring(msg)) end
 local terminateScript = false
 local initialized = false
 
-local fxName = 'BB_MIDI Bridge.jsfx'
+local fxName = 'BB_MIDI Bridge (Quick MIDI Preview).jsfx'
 local gmemID = 'BB_MIDIPreview'
 
 local track
