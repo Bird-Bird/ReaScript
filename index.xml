@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="BirdBird Scripts" commit="463bdff6d1c4253078240e0c16c0651f8659113f">
+<index version="1" name="BirdBird Scripts" commit="9e9bc49baae847dfbe3b1bb1e48541236bdfb8e8">
   <category name="Items Editing">
     <reapack name="BirdBird_Delete item under mouse.lua" type="script" desc="Delete item under mouse">
       <version name="1.0" author="BirdBird" time="2020-02-24T08:14:51Z">
@@ -46,6 +46,14 @@
       <version name="1.0" author="MPL, BirdBird mod" time="2019-12-22T04:31:47Z">
         <changelog><![CDATA[+ Initial Release]]></changelog>
         <source main="main">https://github.com/Bird-Bird/ReaScript/raw/b542c162f3f090505eed38e7d807f769dcb53d9c/Items%20Editing/BirdB%C4%B0rd_Smart%20duplicate%20relative%20to%20grid%20(Delete%20overlapping%20media).lua</source>
+      </version>
+    </reapack>
+  </category>
+  <category name="JSFX">
+    <reapack name="BB_MIDI Bridge (Quick MIDI Preview).jsfx" type="effect" desc="MIDI Input bridge for Quick MIDI Preview.">
+      <version name="1.00" author="BirdBird" time="2020-04-09T11:13:16Z">
+        <changelog><![CDATA[Initial release]]></changelog>
+        <source>https://github.com/Bird-Bird/ReaScript/raw/9e9bc49baae847dfbe3b1bb1e48541236bdfb8e8/JSFX/BB_MIDI%20Bridge%20(Quick%20MIDI%20Preview).jsfx</source>
       </version>
     </reapack>
   </category>
