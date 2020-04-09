@@ -2,8 +2,6 @@ desc: MIDI Input bridge for Quick MIDI Preview.
 version: 1.00
 changelog: Initial release
 author: BirdBird
-about:
-  Acts as a bridge to pass MIDI notes from Quick MIDI Preview.
 
 options:gmem=BB_MIDIPreview
 
