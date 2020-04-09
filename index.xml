@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="BirdBird Scripts" commit="fe414e4bce53a4477f9bf101c31a093949b2e505">
+<index version="1" name="BirdBird Scripts" commit="463bdff6d1c4253078240e0c16c0651f8659113f">
   <category name="Items Editing">
     <reapack name="BirdBird_Delete item under mouse.lua" type="script" desc="Delete item under mouse">
       <version name="1.0" author="BirdBird" time="2020-02-24T08:14:51Z">
@@ -76,6 +76,13 @@
       <version name="1.0" author="BirdBird" time="2019-12-22T01:59:38Z">
         <changelog><![CDATA[+ Initial Release]]></changelog>
         <source main="midi_editor">https://github.com/Bird-Bird/ReaScript/raw/dd3c4a3b3f9200b111f8f0a28ddfbcb56d39beda/MIDI%20Editor/BirdBird_Quick%20MIDI%20Preview.lua</source>
+      </version>
+      <version name="2.0" author="BirdBird" time="2020-04-09T10:54:39Z">
+        <changelog><![CDATA[+ Major upgrade to script behaviour.
++ Script no longer uses transport play.
++ Uses a MIDI bridge jsfx to preview notes instead.]]></changelog>
+        <source main="midi_editor">https://github.com/Bird-Bird/ReaScript/raw/463bdff6d1c4253078240e0c16c0651f8659113f/MIDI%20Editor/BirdBird_Quick%20MIDI%20Preview.lua</source>
+        <source file="Resources/BB_MIDI Bridge.jsfx">https://github.com/Bird-Bird/ReaScript/raw/463bdff6d1c4253078240e0c16c0651f8659113f/MIDI%20Editor/Resources/BB_MIDI%20Bridge.jsfx</source>
       </version>
     </reapack>
     <reapack name="BirdBird_Select notes aligned with mouse (Vertical).lua" type="script" desc="Select notes aligned with mouse (Vertical).lua">
