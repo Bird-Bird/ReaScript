@@ -5,7 +5,7 @@
  * REAPER: 6.0
  * Extensions: None
  * Provides: Resources/BB_MIDI Bridge.jsfx
- * Version: 2.0
+ * Version: 2.1
 --]]
  
 --[[
