@@ -1,18 +1,10 @@
 desc: MIDI Input bridge for Quick MIDI Preview.
 
-/**
- * JSFX Name: BB_MIDI Bridge
- * Author: BirdBird
- * Licence: GPL v3
- * REAPER: 6.0
- * Version: 1.0
- */
-
-/**
- * Changelog:
- * v1.0 (2020-04-09)
-  + Initial Release
- */
+version: 1.00
+changelog: Initial release
+author: BirdBird
+about:
+  Acts as a bridge to pass MIDI notes from Quick MIDI Preview.
 
 options:gmem=BB_MIDIPreview
 
