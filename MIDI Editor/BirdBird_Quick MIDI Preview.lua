@@ -4,7 +4,7 @@
  * Licence: GPL v3
  * REAPER: 6.0
  * Extensions: None
- * Version: 2.1
+ * Version: 2.2
 --]]
  
 --[[
@@ -15,6 +15,8 @@
      + Major upgrade to script behaviour.
      + Script no longer uses transport play.
      + Uses a MIDI bridge jsfx to preview notes instead.
+ * v2.1
+     + Prevent undo spam
 --]]
 
 function p(msg) reaper.ShowConsoleMsg('\n' .. tostring(msg)) end
@@ -98,6 +100,7 @@ end
 
 --=====STATES=====--
 function init()
+    reaper.Undo_BeginBlock()
     addJSFX()
     return false
 end
@@ -148,6 +151,7 @@ function exit()
     reaper.TrackFX_Delete( track, fxID )
 
     resetGMEM()
+    reaper.Undo_EndBlock('MIDI Preview', 1)
 end
 
 --=====EXECUTION=====--
