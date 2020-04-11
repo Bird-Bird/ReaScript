@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="BirdBird Scripts" commit="5447320b33fbbf45f76f1e9c8c4098b2cc4fb50e">
+<index version="1" name="BirdBird Scripts" commit="e022d5f5124557c805ddcc4d10751cf0a2f0004e">
   <category name="Items Editing">
     <reapack name="BirdBird_Delete item under mouse.lua" type="script" desc="Delete item under mouse">
       <version name="1.0" author="BirdBird" time="2020-02-24T08:14:51Z">
@@ -62,6 +62,18 @@
       <version name="1.0" author="BirdBird" time="2019-12-22T01:59:38Z">
         <changelog><![CDATA[+ Initial Release]]></changelog>
         <source main="midi_editor">https://github.com/Bird-Bird/ReaScript/raw/dd3c4a3b3f9200b111f8f0a28ddfbcb56d39beda/MIDI%20Editor/BirdBird_Adjust%20velocity%20for%20selected%20or%20closest%20notes%20(Mousewheel).lua</source>
+      </version>
+    </reapack>
+    <reapack name="BirdBird_Extend selected notes to mouse cursor.lua" type="script" desc="Extend selected notes to mouse cursor.lua">
+      <version name="1.0" author="BirdBird" time="2020-04-11T16:00:11Z">
+        <changelog><![CDATA[+ Initial Release]]></changelog>
+        <source main="midi_editor">https://github.com/Bird-Bird/ReaScript/raw/e022d5f5124557c805ddcc4d10751cf0a2f0004e/MIDI%20Editor/BirdBird_Extend%20selected%20notes%20to%20mouse%20cursor.lua</source>
+      </version>
+    </reapack>
+    <reapack name="BirdBird_Nudge notes (Perform until shortcut released).lua" type="script" desc="Nudge notes (Perform until shortcut released).lua">
+      <version name="1.0" author="BirdBird" time="2020-04-11T16:00:11Z">
+        <changelog><![CDATA[+ Initial Release]]></changelog>
+        <source main="midi_editor">https://github.com/Bird-Bird/ReaScript/raw/e022d5f5124557c805ddcc4d10751cf0a2f0004e/MIDI%20Editor/BirdBird_Nudge%20notes%20(Perform%20until%20shortcut%20released).lua</source>
       </version>
     </reapack>
     <reapack name="BirdBird_Nudge selected or closest notes (Mousewheel).lua" type="script" desc="Nudge selected or closest notes (Mousewheel).lua">
