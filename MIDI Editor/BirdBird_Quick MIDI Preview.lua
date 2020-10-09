@@ -4,7 +4,7 @@
  * Licence: GPL v3
  * REAPER: 6.0
  * Extensions: None
- * Version: 2.2
+ * Version: 2.3
 --]]
  
 --[[
@@ -17,6 +17,10 @@
      + Uses a MIDI bridge jsfx to preview notes instead.
  * v2.1
      + Prevent undo spam
+ * v2.2
+    + Respect muted notes
+ * v2.3
+    + Prevent floating JSFX window (Thanks to _Stevie_ for the fix)
 --]]
 
 function p(msg) reaper.ShowConsoleMsg('\n' .. tostring(msg)) end
@@ -50,13 +54,15 @@ function addJSFX() --insert MIDI Bridge and attach gmem
         reaper.ReaScriptError('Could not find BB_MIDI Bridge.jsfx, please install it from ReaPack.') 
         terminateScript = true
     else
+        reaper.TrackFX_Show(track, fxID, 2)
+        reaper.SN_FocusMIDIEditor()
         reaper.TrackFX_CopyToTrack( track, fxID, track, 0, true ) --reorder
         reaper.gmem_attach(gmemID)
     end
 end
 
 function handleReorder() --order MIDI Bridge to be the first fx on track
-    local id = reaper.TrackFX_AddByName( track, fxName, false, 0 )
+    local id = reaper.TrackFX_AddByName( track, fxName, false, 1 )
     if id == 0 then
         reaper.gmem_write(1, 1) --init jsfx
         initialized = true
@@ -90,7 +96,7 @@ function getNoteBuffer() --get a table of all the notes under edit cursor
     local buffer = {}
     for i = 0, noteCount-1 do
         local retval, selected, muted, startppqpos, endppqpos, chan, pitch, vel = reaper.MIDI_GetNote( take, i )
-        if editCursorPPQ > startppqpos and editCursorPPQ < endppqpos then --Note is over edit cursor
+        if editCursorPPQ > startppqpos and editCursorPPQ < endppqpos and not muted then --Note is over edit cursor
             buffer[pitch] = {channel = chan, pitch = pitch, vel = vel}
         end
     end
