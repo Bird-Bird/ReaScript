@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="BirdBird Scripts" commit="aa1ccc775bfba408967a8720397bbc96a425826d">
+<index version="1" name="BirdBird Scripts" commit="02edc8ad5573dafde257dd18779dd9502e852ce1">
   <category name="Items Editing">
     <reapack name="BirdBird_Delete item under mouse.lua" type="script" desc="Delete item under mouse">
       <version name="1.0" author="BirdBird" time="2020-02-24T08:14:51Z">
@@ -48,6 +48,12 @@
         <source main="main">https://github.com/Bird-Bird/ReaScript/raw/b542c162f3f090505eed38e7d807f769dcb53d9c/Items%20Editing/BirdB%C4%B0rd_Smart%20duplicate%20relative%20to%20grid%20(Delete%20overlapping%20media).lua</source>
       </version>
     </reapack>
+    <reapack name="BirdBird_Bring back MIDI Editor.lua" type="script" desc="Bring back MIDI Editor.lua">
+      <version name="1.0" author="BirdBird" time="2020-10-09T23:58:46Z">
+        <changelog><![CDATA[+ Moved "Bring back MIDI Editor" to main]]></changelog>
+        <source main="main">https://github.com/Bird-Bird/ReaScript/raw/aa1ccc775bfba408967a8720397bbc96a425826d/MIDI%20Editor/BirdBird_Bring%20back%20MIDI%20Editor.lua</source>
+      </version>
+    </reapack>
   </category>
   <category name="JSFX">
     <reapack name="BB_MIDI Bridge (Quick MIDI Preview).jsfx" type="effect" desc="MIDI Input bridge for Quick MIDI Preview.">
@@ -62,12 +68,6 @@
       <version name="1.0" author="BirdBird" time="2019-12-22T01:59:38Z">
         <changelog><![CDATA[+ Initial Release]]></changelog>
         <source main="midi_editor">https://github.com/Bird-Bird/ReaScript/raw/dd3c4a3b3f9200b111f8f0a28ddfbcb56d39beda/MIDI%20Editor/BirdBird_Adjust%20velocity%20for%20selected%20or%20closest%20notes%20(Mousewheel).lua</source>
-      </version>
-    </reapack>
-    <reapack name="BirdBird_Bring back MIDI Editor.lua" type="script" desc="Bring back MIDI Editor.lua">
-      <version name="1.0" author="BirdBird" time="2020-10-09T23:58:46Z">
-        <changelog><![CDATA[+ Initial Release]]></changelog>
-        <source main="midi_editor">https://github.com/Bird-Bird/ReaScript/raw/aa1ccc775bfba408967a8720397bbc96a425826d/MIDI%20Editor/BirdBird_Bring%20back%20MIDI%20Editor.lua</source>
       </version>
     </reapack>
     <reapack name="BirdBird_Extend selected notes to mouse cursor.lua" type="script" desc="Extend selected notes to mouse cursor.lua">
