@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="BirdBird Scripts" commit="aa1ccc775bfba408967a8720397bbc96a425826d">
+<index version="1" name="BirdBird Scripts" commit="0450ca4d730491a4b780224091c5743292e6cbfa">
   <category name="Items Editing">
     <reapack name="BirdBird_Delete item under mouse.lua" type="script" desc="Delete item under mouse">
       <version name="1.0" author="BirdBird" time="2020-02-24T08:14:51Z">
@@ -56,6 +56,12 @@
         <source>https://github.com/Bird-Bird/ReaScript/raw/9e9bc49baae847dfbe3b1bb1e48541236bdfb8e8/JSFX/BB_MIDI%20Bridge%20(Quick%20MIDI%20Preview).jsfx</source>
       </version>
     </reapack>
+    <reapack name="BB_Stuck Note Utility.jsfx" type="effect" desc="BB Stuck Note Utility">
+      <version name="1.00" author="BirdBird" time="2020-11-26T16:10:27Z">
+        <changelog><![CDATA[Initial release]]></changelog>
+        <source>https://github.com/Bird-Bird/ReaScript/raw/0450ca4d730491a4b780224091c5743292e6cbfa/JSFX/BB_Stuck%20Note%20Utility.jsfx</source>
+      </version>
+    </reapack>
   </category>
   <category name="MIDI Editor">
     <reapack name="BirdBird_Adjust velocity for selected or closest notes (Mousewheel).lua" type="script" desc="Adjust velocity for selected or closest notes (Mousewheel).lua">
@@ -74,6 +80,18 @@
       <version name="1.0" author="BirdBird" time="2020-04-11T16:00:11Z">
         <changelog><![CDATA[+ Initial Release]]></changelog>
         <source main="midi_editor">https://github.com/Bird-Bird/ReaScript/raw/e022d5f5124557c805ddcc4d10751cf0a2f0004e/MIDI%20Editor/BirdBird_Extend%20selected%20notes%20to%20mouse%20cursor.lua</source>
+      </version>
+    </reapack>
+    <reapack name="BirdBird_Insert stuck note utility on all tracks.lua" type="script" desc="Insert stuck note utility on all tracks.lua">
+      <version name="1.0" author="BirdBird" time="2020-11-26T16:10:27Z">
+        <changelog><![CDATA[+ Initial Release]]></changelog>
+        <source main="midi_editor">https://github.com/Bird-Bird/ReaScript/raw/0450ca4d730491a4b780224091c5743292e6cbfa/MIDI%20Editor/BirdBird_Insert%20stuck%20note%20utility%20on%20all%20tracks.lua</source>
+      </version>
+    </reapack>
+    <reapack name="BirdBird_Insert stuck note utility on selected tracks.lua" type="script" desc="Insert stuck note utility on selected tracks.lua">
+      <version name="1.0" author="BirdBird" time="2020-11-26T16:10:27Z">
+        <changelog><![CDATA[+ Initial Release]]></changelog>
+        <source main="midi_editor">https://github.com/Bird-Bird/ReaScript/raw/0450ca4d730491a4b780224091c5743292e6cbfa/MIDI%20Editor/BirdBird_Insert%20stuck%20note%20utility%20on%20selected%20tracks.lua</source>
       </version>
     </reapack>
     <reapack name="BirdBird_Nudge notes (Perform until shortcut released).lua" type="script" desc="Nudge notes (Perform until shortcut released).lua">
@@ -125,6 +143,18 @@
       <version name="2.3" author="BirdBird" time="2020-10-09T23:58:46Z">
         <changelog><![CDATA[+ Prevent floating JSFX window (Thanks to _Stevie_ for the fix)]]></changelog>
         <source main="midi_editor">https://github.com/Bird-Bird/ReaScript/raw/aa1ccc775bfba408967a8720397bbc96a425826d/MIDI%20Editor/BirdBird_Quick%20MIDI%20Preview.lua</source>
+      </version>
+    </reapack>
+    <reapack name="BirdBird_Remove stuck note utility from all tracks.lua" type="script" desc="Remove stuck note utility from all tracks.lua">
+      <version name="1.0" author="BirdBird" time="2020-11-26T16:10:27Z">
+        <changelog><![CDATA[+ Initial Release]]></changelog>
+        <source main="midi_editor">https://github.com/Bird-Bird/ReaScript/raw/0450ca4d730491a4b780224091c5743292e6cbfa/MIDI%20Editor/BirdBird_Remove%20stuck%20note%20utility%20from%20all%20tracks.lua</source>
+      </version>
+    </reapack>
+    <reapack name="BirdBird_Remove stuck note utility from selected tracks.lua" type="script" desc="Remove stuck note utility from selected tracks.lua">
+      <version name="1.0" author="BirdBird" time="2020-11-26T16:10:27Z">
+        <changelog><![CDATA[+ Initial Release]]></changelog>
+        <source main="midi_editor">https://github.com/Bird-Bird/ReaScript/raw/0450ca4d730491a4b780224091c5743292e6cbfa/MIDI%20Editor/BirdBird_Remove%20stuck%20note%20utility%20from%20selected%20tracks.lua</source>
       </version>
     </reapack>
     <reapack name="BirdBird_Select notes aligned with mouse (Vertical).lua" type="script" desc="Select notes aligned with mouse (Vertical).lua">
