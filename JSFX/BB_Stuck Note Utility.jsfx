@@ -1,0 +1,55 @@
+desc: BB Stuck Note Utility
+version: 1.00
+changelog: Initial release
+author: BirdBird
+
+in_pin:left input
+in_pin:right input
+out_pin:left output
+out_pin:right output
+
+@init
+ext_noinit = 1;
+noteBuf = 0;
+noteOn = $x90;
+noteOff = $x80;
+
+@block
+while (midirecv(offset,msg1,msg2,msg3)) (
+  msg1==noteOn ? (
+    //count note-on messages
+    noteBuf[msg2] += 1;
+    midisend(offset,msg1,msg2,msg3); 
+  ) : (
+    msg1 == noteOff ? (
+      //count note-off messages
+      noteBuf[msg2] -= 1;
+      midisend(offset,msg1,msg2,msg3);
+    );
+  );
+);
+
+stopped == 1 ? ( //send note-off messages on transport stop
+  i= 0;
+  while (i < 128) (
+      while (noteBuf[i] > 0) (
+        midisend(0,noteOff,i,1);
+        noteBuf[i] -= 1;
+      );
+    i += 1;
+  );
+  
+  stopped = 0;
+);
+
+@sample
+//track playback state
+play_state == 0 && last_play_state == 1 ? (
+  stopped = 1;
+);
+ 
+last_play_state = play_state;
+
+//passthrough audio
+spl0 = spl0;
+spl1 = spl1;
